@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .content {
+    min-height: calc(100vh - 80px); /* 80px is the approximate height of the footer */
+    padding-bottom: 80px;
+  }
+  
+  app-footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  

@@ -1,0 +1,32 @@
+.contact-container {
+  display: flex;
+  justify-content: center; /* Centers the mat-card horizontally */
+  align-items: center; /* Centers the mat-card vertically */
+  min-height: 100vh; /* Ensures the container takes full viewport height */
+}
+
+.center-content {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wide-field {
+  width: 100%; /* Adjusts wide fields to take full width */
+}
+
+mat-card {
+    width: 400px;              /* Set a width for the card */
+    padding: 20px;             /* Add padding for spacing */
+  }
+  
+  mat-card-title {
+    text-align: center;        /* Centers the title */
+    font-size: 24px;           /* Optional: make the title larger */
+    margin-bottom: 10px;       /* Optional: add some space below the title */
+  }

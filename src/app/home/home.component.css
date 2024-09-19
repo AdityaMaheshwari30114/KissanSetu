@@ -1,0 +1,36 @@
+
+  
+  mat-card {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  #welcome{
+    color: blue;
+    font-style: bold;
+    text-align: center;
+    font-size: 2.875em;
+    text-shadow: 2px 2px 6px;
+}
+.home-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+  }
+  
+  .home-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #3f51b5;
+    background-color: blanchedalmond;
+  }
+  
+  button {
+    font-size: 1rem;
+  }
+  
