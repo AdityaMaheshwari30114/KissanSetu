@@ -11,7 +11,6 @@ import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-
 // Angular Material imports
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -22,6 +21,9 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FarmersComponent } from './farmers/farmers.component';
 import { BuyersComponent } from './buyers/buyers.component';
+import { ViewContractComponent } from './view-contract/view-contract.component';
+import { MatTableModule } from '@angular/material/table';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { BuyersComponent } from './buyers/buyers.component';
     ContactComponent,
     AboutComponent,
     FarmersComponent,
-    BuyersComponent
+    BuyersComponent,
+    ViewContractComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,7 @@ import { BuyersComponent } from './buyers/buyers.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatTableModule,      // Correctly import your routing module
     FormsModule,              // Add FormsModule for form handling
     ReactiveFormsModule        // Add ReactiveFormsModule for reactive forms
   ],

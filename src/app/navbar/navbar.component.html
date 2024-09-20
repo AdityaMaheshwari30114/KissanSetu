@@ -9,9 +9,11 @@
   <div class="dropdown">
     <button mat-button [routerLink]="'/farmers'">Farmers</button>
     <div class="dropdown-content">
-      <a mat-button [routerLink]="['/']">Register as Farmer</a>
+      <a mat-button [routerLink]="['/register']">Register as Farmer</a>
+      
       <a mat-button [routerLink]="['/']">Submit Produce Details</a>
       <a mat-button [routerLink]="['/']">Training Resources</a>
+      <a mat-button [routerLink]="['/view-contract']">View Contract</a>
       <a mat-button [routerLink]="['/']">FAQ</a>
     </div>
   </div>
@@ -25,10 +27,10 @@
     </div>
   </div>
   <div class="dropdown">
-    <button mat-button [routerLink]="['about']" >About Us</button>
+    <button mat-button [routerLink]="['/about']" >About Us</button>
     <div class="dropdown-content">
-      <a mat-button [routerLink]="['/']">Our Mission</a>
-      <a mat-button [routerLink]="['/']">About Assured Contract Farming System</a>
+      <a mat-button [routerLink]="['/about']">Our Mission</a>
+      <a mat-button [routerLink]="['/about']">About Assured Contract Farming System</a>
     </div>
   </div>
 

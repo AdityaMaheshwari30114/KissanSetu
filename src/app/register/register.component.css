@@ -4,7 +4,9 @@
   align-items: center; /* Centers the mat-card vertically */
   min-height: 100vh; /* Ensures the container takes full viewport height */
 }
-
+.spacer {
+  flex: 1 1 auto;
+}
 .center-content {
   width: 100%; /* Sets the card to be centered within the container */
   max-width: 400px; /* Restricts the width of the card */

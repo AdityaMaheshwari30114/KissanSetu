@@ -1,0 +1,50 @@
+<style>
+#example1 {
+  border: 1px solid black;
+  padding: 50px;
+  background: url(assets/login.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+</style>
+<div id="example1">
+  <div class="contact-container"> 
+    <mat-card class="center-content">
+      <mat-card-title>Register</mat-card-title><br>
+    <mat-card-content>
+      <div class="form-container">
+        <form class="register-form">
+          <mat-form-field appearance="outline" class="wide-field">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="Enter your first name" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="wide-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Enter your last name" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="wide-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Enter your email" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="wide-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter your password" required>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="wide-field">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" placeholder="Confirm your password" required>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" class="full-width">Register</button><br><br>
+          <h2 text-align="centre">Already have an account?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button mat-raised-button routerLink="/login"color="warn" >Login</button></h2>
+          
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  </div>
+</div>

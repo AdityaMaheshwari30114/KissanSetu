@@ -41,3 +41,8 @@ mat-card {
     font-size: 30px;
     color: rgb(243, 106, 129);
   }
+  .center-div {
+    width: 80%; /* Set a width for the div */
+    margin: 0 auto; /* This centers it horizontally */
+  }
+  

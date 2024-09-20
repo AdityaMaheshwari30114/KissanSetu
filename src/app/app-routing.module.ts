@@ -7,6 +7,8 @@ import { ContactComponent } from './contact/contact.component';  // Import Conta
 import { LoginComponent } from './login/login.component';
 import { FarmersComponent } from './farmers/farmers.component';
 import { BuyersComponent } from './buyers/buyers.component';
+import { ViewContractComponent } from './view-contract/view-contract.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },   // Home route
@@ -14,8 +16,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },  // Contact route
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'farmers', component: FarmersComponent },
   { path: 'buyers', component: BuyersComponent },
+  { path: 'view-contract', component: ViewContractComponent },
   { path: '**', redirectTo: '' }  // Handle unknown routes
 ];
 

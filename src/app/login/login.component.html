@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-</style>
+</style>  
 <div id="example1">
   <div class="contact-container"> 
   <mat-card class="center-content">
@@ -15,14 +15,14 @@
       <div class="form-container">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-          <mat-form-field appearance="fill" class="wide-field">
+          <mat-form-field appearance="outline" class="wide-field">
             <mat-label>Email</mat-label>
             <input matInput formControlName="email" placeholder="Enter your email" required />
             <mat-error *ngIf="email.invalid && email.touched">Email is required.</mat-error>
           </mat-form-field>
           <br>
 
-          <mat-form-field appearance="fill" class="wide-field">
+          <mat-form-field appearance="outline" class="wide-field">
             <mat-label>Password</mat-label>
             <input matInput type="password" formControlName="password" placeholder="Enter your password" required />
             <mat-error *ngIf="password.invalid && password.touched">Password is required.</mat-error>
