@@ -1,6 +1,6 @@
 .contact-container {
   display: flex;
-  justify-content: center; /* Centers the mat-card horizontally */
+  justify-content: right; /* Centers the mat-card horizontally */
   align-items: center; /* Centers the mat-card vertically */
   min-height: 100vh; /* Ensures the container takes full viewport height */
 }

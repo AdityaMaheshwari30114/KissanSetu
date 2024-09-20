@@ -20,6 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FarmersComponent } from './farmers/farmers.component';
+import { BuyersComponent } from './buyers/buyers.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LoginComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    FarmersComponent,
+    BuyersComponent
   ],
   imports: [
     BrowserModule,

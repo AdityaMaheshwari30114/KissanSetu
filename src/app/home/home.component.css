@@ -1,20 +1,17 @@
 
-  
-  mat-card {
-    max-width: 800px;
-    margin: 20px auto;
-  }
   #welcome{
     color: blue;
     font-style: bold;
     text-align: center;
     font-size: 2.875em;
-    text-shadow: 2px 2px 6px;
+    text-shadow: 1px 1px 1px;
 }
 .home-container {
     text-align: center;
     margin-top: 10px;
     padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   
   .home-container h1 {
@@ -30,7 +27,53 @@
     background-color: blanchedalmond;
   }
   
-  button {
-    font-size: 1rem;
+  
+
+  .horizontal-grid {
+    display: flex;
+    flex-wrap: nowrap;   /* Keeps items in a row */
+    overflow-x: auto;    /* Adds horizontal scroll if needed */
+    gap: 10px;           /* Adds space between grid items */
+  }
+  
+  .grid-item {
+    flex: 0 0 auto;      /* Prevents shrinking */
+    width: 200px;        /* Adjust width as needed */
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;  /* Allows description to appear inside */
+  }
+  
+  .grid-item:hover {
+    background-color: pink;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container {
+    font-size: 40px;
+    color: #e91e63;
+  }
+  
+  .text-container h3 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #757575;
+    opacity: 0;               /* Hidden by default */
+    max-height: 0;            /* No space when hidden */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .grid-item:hover .description {
+    opacity: 1;              /* Make visible on hover */
+    max-height: 100px;        /* Adjust to fit content */
   }
   

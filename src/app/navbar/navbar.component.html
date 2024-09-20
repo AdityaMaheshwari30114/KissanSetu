@@ -1,11 +1,46 @@
-<mat-toolbar color="primary">
-  <span>Assured Contract Farming</span>
+<mat-toolbar color="warn">
+  <span>KISSAN SETU</span>
   <span class="spacer"></span>
   <a [routerLink]="['/']" style="text-decoration: none; color: white;">
     <mat-icon>home</mat-icon>
   </a>
   <a mat-button [routerLink]="['/services']">Services</a>
-  <a mat-button [routerLink]="['/about']">About</a>
+
+  <div class="dropdown">
+    <button mat-button [routerLink]="'/farmers'">Farmers</button>
+    <div class="dropdown-content">
+      <a mat-button [routerLink]="['/']">Register as Farmer</a>
+      <a mat-button [routerLink]="['/']">Submit Produce Details</a>
+      <a mat-button [routerLink]="['/']">Training Resources</a>
+      <a mat-button [routerLink]="['/']">FAQ</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button mat-button [routerLink]="'/buyers'">Buyers</button>
+    <div class="dropdown-content">
+      <a mat-button [routerLink]="['/']">Register as Buyer</a>
+      <a mat-button [routerLink]="['/']">View  Farmers Profile</a>
+      
+    </div>
+  </div>
+  <div class="dropdown">
+    <button mat-button [routerLink]="['about']" >About Us</button>
+    <div class="dropdown-content">
+      <a mat-button [routerLink]="['/']">Our Mission</a>
+      <a mat-button [routerLink]="['/']">About Assured Contract Farming System</a>
+    </div>
+  </div>
+
   <a mat-button [routerLink]="['/contact']">Contact Us</a>
-  <a mat-raised-button color="accent" [routerLink]="['/login']">Login</a>
+
+  <div class="dropdown">
+    <a mat-raised-button color="primary" [routerLink]="['/login']">Login</a>
+    <div class="dropdown-content">
+      <a mat-button [routerLink]="['/login']">Login as Farmer</a>
+      <a mat-button [routerLink]="['/login']">Login as Buyer</a>
+    </div>
+  </div>
+  
+    
 </mat-toolbar>

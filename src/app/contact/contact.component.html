@@ -1,6 +1,21 @@
+<style>
+#example1 {
+  border: 2px solid black;
+  padding: 350px;
+  background: url(assets/contact.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: right;
+}
+</style>
+<div id="example1">
+  <h2 id="h11">Contact Us</h2><br>
+  &nbsp;&nbsp;<h4  id="p11">Better Agriculture for Better Future</h4>
+</div>
+
 <div class="contact-container">
     <mat-card class="center-content">
-      <mat-card-title>Contact Us</mat-card-title><br>
+      <mat-card-title>Please feel free to get in touch with us </mat-card-title><br>
       <mat-card-content>
         <div class="form-container">
           <form>
@@ -32,7 +47,10 @@
               <textarea matInput placeholder="Enter your message" rows="4"></textarea>
             </mat-form-field>
             <br><br>
-            <button mat-raised-button color="primary" type="submit">Send Message</button>
+            <div mat-dialog-actions align="center">
+            <button  mat-raised-button color="primary" type="submit">Send Message</button>
+            </div>
+            
           </form>
         </div>
       </mat-card-content>
