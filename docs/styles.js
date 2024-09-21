@@ -486,8 +486,8 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\New\KissanSetu\src\custom-theme.scss */"./src/custom-theme.scss");
-module.exports = __webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\New\KissanSetu\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\KissanSetu\KissanSetu\src\custom-theme.scss */"./src/custom-theme.scss");
+module.exports = __webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\KissanSetu\KissanSetu\src\styles.css */"./src/styles.css");
 
 
 /***/ })
