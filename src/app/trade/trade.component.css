@@ -1,0 +1,150 @@
+.background-container {
+  background-color: lightgray;
+  /* background-image: url("/assets/login.jpg"); */
+}
+
+.form-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.user-type-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-type-toggle button {
+  padding: 12px 24px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: black; /* Ensure text of inactive button is black */
+}
+
+.user-type-toggle button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.user-type-toggle button:not(.active) {
+  color: black; 
+}
+
+.user-type-toggle button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.terms-label {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.terms-label input {
+  margin-right: 10px;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  .user-type-toggle {
+    flex-direction: column;
+  }
+
+  .user-type-toggle button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

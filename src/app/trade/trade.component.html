@@ -1,0 +1,97 @@
+
+<div class="background-container">
+  <br>
+<div class="form-container">
+  <h2>Create Your Trade</h2>
+
+  <!-- User type toggle: Seller/Buyer -->
+  <div class="user-type-toggle">
+    <button [class.active]="isSeller" (click)="toggleUserType('seller')">
+      <span class="icon">📦</span> Seller
+    </button>
+    <button [class.active]="!isSeller" (click)="toggleUserType('buyer')">
+      <span class="icon">💼</span> Buyer
+    </button>
+  </div>
+
+  <!-- Form starts -->
+  <form [formGroup]="trade" (ngSubmit)="onSubmit()">
+    
+    <!-- Commodity selection -->
+    <div class="card">
+      <label for="commodity">Commodity</label>
+      <select formControlName="commodity" (change)="onCommodityChange($event)">
+        <option value="">Select commodity</option>
+        <option *ngFor="let commodity of commodities" [value]="commodity.name">{{ commodity.name }}</option>
+      </select>
+    </div>
+
+    <!-- Variety dropdown based on commodity -->
+    <div class="card" *ngIf="commodityVarieties.length > 0">
+      <label for="variety">Variety</label>
+      <select formControlName="variety">
+        <option value="">Select variety</option>
+        <option *ngFor="let variety of commodityVarieties" [value]="variety">{{ variety }}</option>
+      </select>
+    </div>
+
+    <!-- Quantity input -->
+    <div class="card">
+      <label for="quantity">Quantity</label>
+      <input formControlName="quantity" placeholder="Enter quantity" />
+      <select formControlName="quantityUnit">
+        <option value="QTL">QTL</option>
+        <option value="KG">KG</option>
+        <option value="TON">TON</option>
+      </select>
+    </div>
+
+    <!-- Price input -->
+    <div class="card">
+      <label for="price">Price</label>
+      <input formControlName="price" placeholder="Enter price" />
+      <select formControlName="priceUnit">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+      </select>
+    </div>
+
+    <!-- Location input -->
+    <div class="card">
+      <label for="location">Location</label>
+      <input formControlName="location" placeholder="Enter location (City, State)" />
+    </div>
+
+    <!-- Start and End date -->
+    <div class="card">
+      <label for="startDate">Start Date</label>
+      <input formControlName="startDate" type="date" />
+      <label for="endDate">End Date</label>
+      <input formControlName="endDate" type="date" />
+    </div>
+
+    <!-- Description input -->
+    <div class="card">
+      <label for="description">Description</label>
+      <textarea formControlName="description" placeholder="Enter quality, terms, etc."></textarea>
+    </div>
+
+    <!-- Document upload -->
+    <div class="card upload-section">
+      <label for="fileUpload">Upload Document</label>
+      <input type="file" (change)="onFileChange($event)" />
+    </div>
+
+    <!-- Terms and conditions checkbox -->
+    <label class="terms-label">
+      <input type="checkbox" formControlName="terms" />
+      I agree to the Terms and Conditions
+    </label>
+
+    <!-- Submit button -->
+    <a mat-raised-button type="submit" color="primary" class="submit-button">Submit</a>
+
+  </form>
+</div>
+<br>  
+</div>

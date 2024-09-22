@@ -26,6 +26,8 @@
       </div>
     </div>
 
+    <a mat-button [routerLink]="['/trade']" (click)="handleLinkClick()">Trade</a>
+
     <div class="dropdown" (mouseenter)="showDropdown('about')" (mouseleave)="hideDropdown()">
       <button mat-button [routerLink]="['/about']" (click)="handleLinkClick()">About Us</button>
       <div class="dropdown-content" [class.show]="dropdownVisible === 'about'">
@@ -40,6 +42,15 @@
       <mat-icon>language</mat-icon>
       <div class="dropdown-content" [class.show]="dropdownVisible === 'language'">
         <a mat-button (click)="handleLinkClick()">English</a>
+        <a mat-button (click)="handleLinkTap()">Hindi</a>
+        <a mat-button (click)="handleLinkTap()">Bengali</a>
+        <a mat-button (click)="handleLinkTap()">Marathi</a>
+        <a mat-button (click)="handleLinkTap()">Telugu</a>
+        <a mat-button (click)="handleLinkTap()">Tamil</a>
+        <a mat-button (click)="handleLinkTap()">Gujarati</a>
+        <a mat-button (click)="handleLinkTap()">Kannada</a>
+        <a mat-button (click)="handleLinkTap()">Odia</a>
+        <a mat-button (click)="handleLinkTap()">Malayalam</a>
       </div>
     </div>
     <a mat-raised-button color="primary" [routerLink]="['/login']" (click)="handleLinkClick()">Login</a>

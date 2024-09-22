@@ -10,6 +10,7 @@ import { BuyersComponent } from './buyers/buyers.component';
 import { ViewContractComponent } from './view-contract/view-contract.component';
 import { RegisterComponent } from './register/register.component';
 import { FaqComponent } from './faq/faq.component';
+import { TradeComponent } from './trade/trade.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },   
   { path: 'services', component: ServicesComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'FaqComponent', component: FaqComponent },
   { path: 'farmers', component: FarmersComponent },
+  { path: 'trade', component: TradeComponent },
   { path: 'buyers', component: BuyersComponent },
   { path: 'view-contract', component: ViewContractComponent },
   { path: '**', redirectTo: '' }  // Handle unknown routes

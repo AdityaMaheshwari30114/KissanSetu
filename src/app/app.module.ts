@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
 import { RegisterComponent } from './register/register.component';
 import { FaqComponent } from './faq/faq.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { TradeComponent } from './trade/trade.component';
 
 @NgModule({
   declarations: [
@@ -42,10 +44,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BuyersComponent,
     ViewContractComponent,
     RegisterComponent,
-    FaqComponent
+    FaqComponent,
+    TradeComponent
   ],
   imports: [
     BrowserModule,
+    MatSnackBarModule,
     AppRoutingModule,         
     BrowserAnimationsModule,  
     MatFormFieldModule,
