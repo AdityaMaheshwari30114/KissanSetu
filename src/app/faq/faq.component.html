@@ -1,0 +1,17 @@
+<br><br><br>
+<mat-toolbar color="primary" class="d-flex justify-content-center">
+  <h2 class="mat-title" >Frequently Asked Questions</h2>
+</mat-toolbar><br><br><br><br>
+<div class="horizontal-grid">
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let faq of faqs">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong><h2>{{ faq.question }}</h2></strong>
+        
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{ faq.answer }}</p><br>
+  </mat-expansion-panel>
+</mat-accordion><br>
+</div>

@@ -19,16 +19,22 @@ export class HomeComponent implements OnInit {
     { label: 'Secure Payment', icon: 'account_balance_wallet', description: 'Safe and secure payment gateway for transactions.' }
   ];
 
-  // Property to track which grid item is clicked
   selectedItemIndex: number | null = null;
 
-  // Function to select a grid item
   selectItem(index: number): void {
     this.selectedItemIndex = this.selectedItemIndex === index ? null : index;
   }
   ngOnInit(): void {
   }
 
+  additionalServices = [
+    { title: 'Guaranteed Contract Farming', description: 'Facilitate transparent agreements between farmers and buyers, ensuring trust and fair benefits on both sides.', icon: 'check_circle' },
+    { title: 'Crop Progress Monitoring', description: 'Receive updates on crop growth, delivery timelines, and contract milestones to maintain smooth communication.', icon: 'track_changes' },
+    { title: 'Government Support Integration', description: 'Benefit from relevant government schemes and subsidies that align with contract farming practices.', icon: 'account_balance' },
+    { title: 'Secure Payment Methods', description: 'Enable safe, verified transactions through reliable payment gateways, ensuring financial security.', icon: 'payment' },
+    { title: 'Legal Guidance and Support', description: 'Get legal assistance to handle disputes, resolve breaches, and maintain compliance with agricultural laws.', icon: 'gavel' },
+    { title: 'Multilingual Service Availability', description: 'Provide support in various languages to cater to farmers and buyers from diverse backgrounds.', icon: 'language' }
+  ];
 }
 
 

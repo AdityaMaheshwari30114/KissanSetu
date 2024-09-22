@@ -1,17 +1,16 @@
-
-  #welcome{
+/* 
+   #welcome {
     color: blue;
-    font-style: bold;
+    font-weight: bold;
     text-align: center;
     font-size: 2.875em;
     text-shadow: 1px 1px 1px;
-}
-.home-container {
+  }
+  
+  .home-container {
     text-align: center;
     margin-top: 10px;
-    padding: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 20px 10px;
   }
   
   .home-container h1 {
@@ -25,27 +24,28 @@
     width: 100%;
     color: #3f51b5;
     background-color: blanchedalmond;
+    padding: 10px;
   }
   
-  
-
   .horizontal-grid {
     display: flex;
-    flex-wrap: nowrap;   /* Keeps items in a row */
-    overflow-x: auto;    /* Adds horizontal scroll if needed */
-    gap: 10px;           /* Adds space between grid items */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    justify-content: center;
   }
   
   .grid-item {
-    flex: 0 0 auto;      /* Prevents shrinking */
-    width: 200px;        /* Adjust width as needed */
+    flex: 0 0 auto;
+    width: 200px;
     text-align: center;
     padding: 20px;
     background-color: white;
     border: 1px solid #e0e0e0;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    position: relative;  /* Allows description to appear inside */
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .grid-item:hover {
@@ -66,14 +66,282 @@
   .description {
     font-size: 14px;
     color: #757575;
-    opacity: 0;               /* Hidden by default */
-    max-height: 0;            /* No space when hidden */
+    opacity: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
   }
   
   .grid-item:hover .description {
-    opacity: 1;              /* Make visible on hover */
-    max-height: 100px;        /* Adjust to fit content */
+    opacity: 1;
+    max-height: 100px;
   }
   
+  #example1 {
+    border: 2px solid black;
+    padding: 0; 
+    background: url(../../assets/home.jpg) no-repeat center center; 
+    background-size: cover; 
+    min-height: 200px; 
+    text-align: right;
+  }
+  
+  @media (max-width: 1024px) {
+    #welcome {
+      font-size: 2.5em;
+    }
+  
+    .horizontal-grid {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .grid-item {
+      width: calc(33.33% - 20px);
+    }
+  
+    #example1 {
+      min-height: 250px; 
+      background-repeat:no -repeat;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #welcome {
+      font-size: 2em;
+    }
+  
+    .home-container h1 {
+      font-size: 2rem;
+    }
+  
+    .horizontal-grid {
+      flex-wrap: wrap;
+    }
+  
+    .grid-item {
+      width: calc(50% - 20px);
+    }
+  
+    #example1 {
+      min-height: 200px; 
+      background-repeat:no -repeat;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #welcome {
+      font-size: 1.5em;
+    }
+  
+    .home-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .grid-item {
+      width: calc(100% - 20px);
+      margin-bottom: 10px;
+    }
+  
+    #example1 {
+      min-height: 150px;
+      background-repeat:no -repeat; 
+    }
+  
+    .text-container h3 {
+      font-size: 14px;
+    }
+  }
+   */
+
+   #welcome {
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.875em;
+    text-shadow: 1px 1px 1px;
+  }
+  
+  .home-container {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px 10px;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+  }
+  
+  .home-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #3f51b5;
+    background-color: blanchedalmond;
+    padding: 10px;
+  }
+  
+  .horizontal-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .grid-item {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item:hover {
+    background-color: pink;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-container {
+    font-size: 40px;
+    color: #e91e63;
+  }
+  
+  .text-container h3 {
+    margin: 10px 0 5px 0;
+    font-size: 16px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #757575;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .grid-item:hover .description {
+    opacity: 1;
+    max-height: 100px;
+  }
+  
+  /* Updated Image Styling */
+  #example1 {
+    border: 2px solid black;
+    padding: 0;
+    text-align: right;
+  }
+  
+  /* Custom Class for Image */
+  .custom-img {
+    width: 100%; /* Ensure the image spans the full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    #welcome {
+      font-size: 2.5em;
+    }
+  
+    .horizontal-grid {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .grid-item {
+      width: calc(33.33% - 20px);
+    }
+  
+    #example1 {
+      min-height: 250px; /* Adjust for larger tablets */
+    }
+  
+    .custom-img {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #welcome {
+      font-size: 2em;
+    }
+  
+    .home-container h1 {
+      font-size: 2rem;
+    }
+  
+    .horizontal-grid {
+      flex-wrap: wrap;
+    }
+  
+    .grid-item {
+      width: calc(50% - 20px);
+    }
+  
+    #example1 {
+      min-height: 200px;
+    }
+  
+    .custom-img {
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #welcome {
+      font-size: 1.5em;
+    }
+  
+    .home-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .grid-item {
+      width: calc(100% - 20px);
+      margin-bottom: 10px;
+    }
+  
+    #example1 {
+      min-height: 150px;
+    }
+  
+    .text-container h3 {
+      font-size: 14px;
+    }
+  
+    .custom-img {
+      height: auto;
+    }
+  }
+  
+  .service-icon {
+    font-size: 48px; 
+    margin-bottom: 15px;
+    color: #3f51b5; 
+    display: inline-block; 
+  }
+  .service-item {
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    transition: transform 0.2s;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+    background-color: rgb(231, 236, 238);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  .row{
+    padding: 40px;
+  }

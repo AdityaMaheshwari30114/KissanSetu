@@ -9,14 +9,15 @@ import { FarmersComponent } from './farmers/farmers.component';
 import { BuyersComponent } from './buyers/buyers.component';
 import { ViewContractComponent } from './view-contract/view-contract.component';
 import { RegisterComponent } from './register/register.component';
-
+import { FaqComponent } from './faq/faq.component';
 const routes: Routes = [
-  { path: '', component: HomeComponent },   // Home route
+  { path: '', component: HomeComponent },   
   { path: 'services', component: ServicesComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },  // Contact route
+  { path: 'contact', component: ContactComponent },  
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'FaqComponent', component: FaqComponent },
   { path: 'farmers', component: FarmersComponent },
   { path: 'buyers', component: BuyersComponent },
   { path: 'view-contract', component: ViewContractComponent },

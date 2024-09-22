@@ -1,64 +1,47 @@
-<style>
-#example1 {
-  border: 2px solid black;
-  padding: 350px;
-  background: url(assets/contact.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  text-align: right;
-}
-#example2{
-  background-color: lightblue;
-  height: 200px;
-}
-</style>
-<div id="example1">
-  <h2 id="h11">Contact Us</h2><br>
-  &nbsp;&nbsp;<h4  id="p11">Better Agriculture for Better Future</h4>
-</div>
-<div class="center-div">
-  <img src="assets/contact1.png"  alt="">
-</div>
-
-
-<div class="contact-container">
+  <div class="center-div">
+    <img src="assets/contact.png" alt="Contact Image" class="responsive-img" id="example1">
+  </div>
+  <div class="center-div">
+    <img src="assets/contact1.png" alt="Contact1 Image" class="responsive-img">
+  </div>
+  
+  <div class="contact-container">
     <mat-card class="center-content">
-      <mat-card-title>Please feel free to get in touch with us </mat-card-title><br>
+      <mat-card-title>Please feel free to get in touch with us</mat-card-title>
       <mat-card-content>
         <div class="form-container">
           <form>
-            <mat-form-field appearance="fill">
-              <mat-label>First Name</mat-label>
-              <input matInput placeholder="First name" required />
-            </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
-            <mat-form-field appearance="fill">
-              <mat-label>Last Name</mat-label>
-              <input matInput placeholder="Last name" required />
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="fill">
-              <mat-label>Your Email</mat-label>
-              <input matInput type="email" placeholder="Enter your email" required />
-            </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;
-            <mat-form-field appearance="fill" >
-              <mat-label>Phone Number</mat-label>
-              <input matInput placeholder="Phone Number" required />
-            </mat-form-field>
-            <br>
+            <div class="form-row">
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First name" required />
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" required />
+              </mat-form-field>
+            </div>
+            <div class="form-row">
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Your Email</mat-label>
+                <input matInput type="email" placeholder="Enter your email" required />
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone Number" required />
+              </mat-form-field>
+            </div>
             <mat-form-field appearance="fill" class="wide-field">
               <mat-label>Subject</mat-label>
               <input matInput placeholder="Subject" required />
             </mat-form-field>
-            <br>
             <mat-form-field appearance="fill" class="wide-field">
               <mat-label>Your Message</mat-label>
               <textarea matInput placeholder="Enter your message" rows="4"></textarea>
             </mat-form-field>
-            <br><br>
             <div mat-dialog-actions align="center">
-            <button  mat-raised-button color="primary" type="submit">Send Message</button>
+              <button mat-raised-button color="primary" type="submit">Send Message</button>
             </div>
-            
           </form>
         </div>
       </mat-card-content>

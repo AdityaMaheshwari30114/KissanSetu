@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';  // Import your routing module
+import { AppRoutingModule } from './app-routing.module';  
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
@@ -10,10 +10,11 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+
 import { MatCheckboxModule } from '@angular/material/checkbox';
-// Angular Material imports
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,6 +25,8 @@ import { BuyersComponent } from './buyers/buyers.component';
 import { ViewContractComponent } from './view-contract/view-contract.component';
 import { MatTableModule } from '@angular/material/table';
 import { RegisterComponent } from './register/register.component';
+import { FaqComponent } from './faq/faq.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -38,22 +41,25 @@ import { RegisterComponent } from './register/register.component';
     FarmersComponent,
     BuyersComponent,
     ViewContractComponent,
-    RegisterComponent
+    RegisterComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,         // Correctly import your routing module
-    BrowserAnimationsModule,   // Required for Angular Material
+    AppRoutingModule,         
+    BrowserAnimationsModule,  
     MatFormFieldModule,
+    MatExpansionModule,
     MatInputModule,
+    MatMenuModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule,      // Correctly import your routing module
-    FormsModule,              // Add FormsModule for form handling
-    ReactiveFormsModule        // Add ReactiveFormsModule for reactive forms
+    MatTableModule,      
+    FormsModule,            
+    ReactiveFormsModule       
   ],
   providers: [],
   bootstrap: [AppComponent]

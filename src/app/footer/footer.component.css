@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   background-color: #0c0c0c;
   color: white;
   text-align: center;
@@ -16,4 +16,86 @@
 .footer-content {
   max-width: 100%;
   margin: 0 auto;
+} */
+
+  /* Footer container */
+.footer {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+
+/* Footer grid layout */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-fit adjusts based on screen size */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 20px; /* Space between items */
+  align-items: center;
+  justify-items: center; /* Align items centrally */
+}
+
+/* Flexbox inside the grid for navigation */
+.footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+}
+
+/* Links styling */
+.footer a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+  display: block; /* Make clickable area large */
+}
+
+/* Hover effect on links */
+.footer a:hover {
+  color: #ff9800; /* Accent color */
+}
+
+/* Responsive media queries */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Slightly smaller columns */
+    gap: 10px;
+  }
+
+  .footer a {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr; /* Single-column layout on small screens */
+    gap: 10px;
+  }
+
+  .footer a {
+    font-size: 12px;
+    padding: 6px;
+  }
 }

@@ -1,0 +1,60 @@
+mat-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+mat-icon:hover {
+  transform: rotate(180deg);
+}
+
+p {
+  padding: 10px;
+  color: #3f51b5;
+}
+
+.horizontal-grid {
+  margin: 10px;
+}
+
+
+h2 {
+  font-size: 20px; 
+  line-height: 1.2;
+}
+
+p {
+  font-size: 16px; 
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 4vw; 
+  }
+  p {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 3.5vw; 
+  }
+  p {
+    font-size: 3vw; 
+  }
+}
+
+@media (min-width: 501px) and (max-width: 655px) {
+  h2 {
+    font-size: 12px; 
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+mat-expansion-panel-header {
+  white-space: normal; 
+  word-wrap: break-word;
+}

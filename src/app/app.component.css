@@ -4,7 +4,7 @@ html, body {
   }
   
   .content {
-    min-height: calc(100vh - 80px); /* 80px is the approximate height of the footer */
+    min-height: calc(100vh - 80px); 
     padding-bottom: 80px;
   }
   

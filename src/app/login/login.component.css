@@ -1,40 +1,75 @@
 .contact-container {
   display: flex;
-  justify-content: right; /* Centers the mat-card horizontally */
-  align-items: center; /* Centers the mat-card vertically */
-  min-height: 100vh; /* Ensures the container takes full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/assets/login.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .center-content {
-  width: 100%; /* Sets the card to be centered within the container */
-  max-width: 400px; /* Restricts the width of the card */
- 
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
-.wide-field {
-  width: 100%; /* Ensures the input fields take full width */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.full-width {
-  width: 100%; /* Ensures the checkbox, button, and link take full width */
+mat-checkbox {
+  margin-bottom: 20px;
+  align-self: flex-start; 
 }
 
-mat-card {
-  width: 100%; /* Full width to allow responsiveness */
-  padding: 20px; /* Add padding for spacing */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a soft shadow for aesthetics */
-  border-radius: 15px; /* Optional: Rounded corners */
+button.full-width {
+  width: 100%; 
+  font-size: 1.1rem;
+  padding: 15px;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-mat-card-title {
-  text-align: center; /* Centers the title */
-  font-size: 24px; /* Optional: make the title larger */
-  margin-bottom: 10px; /* Optional: add some space below the title */
+button.full-width:hover {
+  background-color: #303f9f;
 }
+
+a.full-width {
+  text-align: center;
+  display: block;
+  margin-top: 10px; 
+  font-size: 1rem;
+  color: #3f51b5;
+  transition: color 0.3s ease;
+}
+
+a.full-width:hover {
+  color: #303f9f;
+}
+
+@media (max-width: 768px) {
+  .center-content {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-content {
+    max-width: 100%;
+  }
+}
+

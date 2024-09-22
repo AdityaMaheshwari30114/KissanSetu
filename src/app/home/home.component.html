@@ -1,36 +1,37 @@
+<div class="home-container">
+  <marquee scrollamount="30" height="20%">
+    <h1 id="welcome" class="text-primary text-center">Welcome to the Assured Contract Farming System</h1>
+  </marquee>
+  <h2 class="text-center">This platform connects farmers with potential buyers through secure contracts and reliable transactions.</h2>
+</div>
 
-  <div class="home-container">
-    <marquee  scrollamount="30" height="20%"><h1 id="welcome">Welcome to the Assured Contract Farming System</h1></marquee>
-    <h2>This platform connects farmers with potential buyers through secure contracts and reliable transactions.</h2>
-  </div>
-  
-  <style>
-  #example1 {
-    border: 2px solid black;
-    padding: 350px;
-    background: url(assets/home.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    text-align: right;
-  }
-  </style>
-  <div id="example1">
-    
-  </div>
+<div id="example1" class="border">
+  <img src="assets/home.jpg" class="img-fluid custom-img" alt="Responsive Image" />
+</div>
 
- <br><br>
- <div class="horizontal-grid">
+<br><br>
+<div class="horizontal-grid">
   <mat-card *ngFor="let item of gridItems" class="grid-item">
     <div class="icon-container">
       <mat-icon class="grid-icon">{{ item.icon }}</mat-icon>
     </div>
     <div class="text-container">
       <h3>{{ item.label }}</h3>
-      <!-- Description will be shown on hover -->
       <p class="description">{{ item.description }}</p>
     </div>
   </mat-card>
 </div>
 
 
-
+<div class="row"></div>
+  <div class="col-12" *ngFor="let additionalService of additionalServices">
+    <div class="service-item card text-center mb-3">
+      <div class="text-center">
+        <mat-icon class="service-icon" aria-hidden="false" aria-label="{{additionalService.title}}">{{ additionalService.icon }}</mat-icon>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">{{ additionalService.title }}</h2>
+        <p class="card-text">{{ additionalService.description }}</p>
+      </div>
+    </div>
+  </div>

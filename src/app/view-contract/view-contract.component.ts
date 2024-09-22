@@ -9,7 +9,10 @@ export interface Contract {
 const CONTRACT_DATA: Contract[] = [
   {id: 'C001', crop: 'Wheat', status: 'Active'},
   {id: 'C002', crop: 'Rice', status: 'Completed'},
-  {id: 'C003', crop: 'Maize', status: 'Pending'}
+  {id: 'C003', crop: 'Maize', status: 'Active'},
+  {id: 'C004', crop: 'Pulse', status: 'Active'},
+  {id: 'C005', crop: 'Tomato', status: 'Completed'},
+  {id: 'C006', crop: 'Potato', status: 'Pending'}
 ];
 
 @Component({

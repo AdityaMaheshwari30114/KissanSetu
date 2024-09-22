@@ -1,18 +1,51 @@
-<div class="services-container">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <mat-card>
-        <mat-card-title>Secure Contracts</mat-card-title>
-        <mat-card-content>Assured agreements between farmers and buyers.</mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-title>Price Negotiation Tools</mat-card-title>
-        <mat-card-content>Helping both parties reach the best deals.</mat-card-content>
-      </mat-card>
-      <mat-card>
-        <mat-card-title>Secure Payments</mat-card-title>
-        <mat-card-content>Safe, timely transactions for trust and efficiency.</mat-card-content>
-      </mat-card>
+<div class="container my-4">
+  <mat-toolbar color="primary" class="d-flex justify-content-center">
+  <h2 class="mat-title" >Our Services</h2>
+  </mat-toolbar>
+  
+  <div class="services-grid">
+    <div class="service-item" *ngFor="let service of services">
+      <img [src]="service.image" alt="{{service.title}}" class="service-image" />
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
     </div>
   </div>
-  
+</div>
+
+
+
+
+
+<div class="services-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="fas fa-lock fa-3x mb-3" style="color: #3f51b5;"></i>
+            <h5 class="card-title">Secure Contracts</h5>
+            <p class="card-text">Assured agreements between farmers and buyers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="fas fa-robot fa-3x mb-3" style="color: #3f51b5;"></i>
+            <h5 class="card-title">IoT Based Farm Management</h5>
+            <p class="card-text">An easy-to-use farm management platform that assists agricultural stakeholders across the value chain.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card text-center h-100">
+          <div class="card-body">
+            <i class="fas fa-money-bill-wave fa-3x mb-3" style="color: #3f51b5;"></i>
+            <h5 class="card-title">Secure Payments</h5>
+            <p class="card-text">Safe, timely transactions for trust and efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

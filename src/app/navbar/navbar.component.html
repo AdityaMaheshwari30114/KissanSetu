@@ -1,48 +1,49 @@
 <mat-toolbar color="warn">
   <span>KISSAN SETU</span>
-  <span class="spacer"></span>
-  <a [routerLink]="['/']" style="text-decoration: none; color: white;">
-    <mat-icon>home</mat-icon>
-  </a>
-  <a mat-button [routerLink]="['/services']">Services</a>
 
-  <div class="dropdown">
-    <button mat-button [routerLink]="'/farmers'">Farmers</button>
-    <div class="dropdown-content">
-      <a mat-button [routerLink]="['/register']">Register as Farmer</a>
-      
-      <a mat-button [routerLink]="['/']">Submit Produce Details</a>
-      <a mat-button [routerLink]="['/']">Training Resources</a>
-      <a mat-button [routerLink]="['/view-contract']">View Contract</a>
-      <a mat-button [routerLink]="['/']">FAQ</a>
+  <div class="nav-links" id="navLinks">
+    <a [routerLink]="['/']" (click)="handleLinkClick()" style="text-decoration: none; color: white;">
+      <mat-icon>home</mat-icon>
+    </a>
+
+    <a mat-button [routerLink]="['/services']">Services</a>
+    <div class="dropdown" (mouseenter)="showDropdown('farmers')" (mouseleave)="hideDropdown()">
+      <button mat-button (click)="handleLinkClick()">Farmers</button>
+      <div class="dropdown-content" [class.show]="dropdownVisible === 'farmers'">
+        <a mat-button [routerLink]="['/register']" (click)="handleLinkClick()">Register as Farmer</a>
+        <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">Submit Produce Details</a>
+        <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">Training Resources</a>
+        <a mat-button [routerLink]="['/view-contract']" (click)="handleLinkClick()">View Contract</a>
+        <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">FAQ</a>
+      </div>
     </div>
+
+    <div class="dropdown" (mouseenter)="showDropdown('buyers')" (mouseleave)="hideDropdown()">
+      <button mat-button [routerLink]="['/buyers']" (click)="handleLinkClick()">Buyers</button>
+      <div class="dropdown-content" [class.show]="dropdownVisible === 'buyers'">
+        <a mat-button [routerLink]="['/register']" (click)="handleLinkClick()">Register as Buyer</a>
+        <a mat-button [routerLink]="['/farmers-profile']" (click)="handleLinkClick()">View Farmers Profile</a>
+      </div>
+    </div>
+
+    <div class="dropdown" (mouseenter)="showDropdown('about')" (mouseleave)="hideDropdown()">
+      <button mat-button [routerLink]="['/about']" (click)="handleLinkClick()">About Us</button>
+      <div class="dropdown-content" [class.show]="dropdownVisible === 'about'">
+        <a mat-button [routerLink]="['/about']" (click)="handleLinkClick()">Our Mission</a>
+        <a mat-button [routerLink]="['/about']" (click)="handleLinkClick()">About Assured Contract Farming</a>
+      </div>
+    </div>
+
+    <a mat-button [routerLink]="['/contact']" (click)="handleLinkClick()">Contact Us</a>
+     <!-- Language Dropdown -->
+     <div class="dropdown" (mouseenter)="showDropdown('language')" (mouseleave)="hideDropdown()">
+      <mat-icon>language</mat-icon>
+      <div class="dropdown-content" [class.show]="dropdownVisible === 'language'">
+        <a mat-button (click)="handleLinkClick()">English</a>
+      </div>
+    </div>
+    <a mat-raised-button color="primary" [routerLink]="['/login']" (click)="handleLinkClick()">Login</a>
   </div>
 
-  <div class="dropdown">
-    <button mat-button [routerLink]="'/buyers'">Buyers</button>
-    <div class="dropdown-content">
-      <a mat-button [routerLink]="['/']">Register as Buyer</a>
-      <a mat-button [routerLink]="['/']">View  Farmers Profile</a>
-      
-    </div>
-  </div>
-  <div class="dropdown">
-    <button mat-button [routerLink]="['/about']" >About Us</button>
-    <div class="dropdown-content">
-      <a mat-button [routerLink]="['/about']">Our Mission</a>
-      <a mat-button [routerLink]="['/about']">About Assured Contract Farming System</a>
-    </div>
-  </div>
-
-  <a mat-button [routerLink]="['/contact']">Contact Us</a>
-
-  <div class="dropdown">
-    <a mat-raised-button color="primary" [routerLink]="['/login']">Login</a>
-    <div class="dropdown-content">
-      <a mat-button [routerLink]="['/login']">Login as Farmer</a>
-      <a mat-button [routerLink]="['/login']">Login as Buyer</a>
-    </div>
-  </div>
-  
-    
+  <span class="hamburger" (click)="toggleNavbar()">&#9776;</span>
 </mat-toolbar>
