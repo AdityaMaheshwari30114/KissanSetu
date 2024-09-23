@@ -533,9 +533,9 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\KissanSetu\KissanSetu\src\custom-theme.scss */"./src/custom-theme.scss");
-__webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\KissanSetu\KissanSetu\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-module.exports = __webpack_require__(/*! C:\Users\adity\OneDrive\Desktop\Projects\KissanSetu\KissanSetu\src\styles.css */"./src/styles.css");
+__webpack_require__(/*! D:\Aditya\KisanSetu\KissanSetu\src\custom-theme.scss */"./src/custom-theme.scss");
+__webpack_require__(/*! D:\Aditya\KisanSetu\KissanSetu\node_modules\bootstrap\dist\css\bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+module.exports = __webpack_require__(/*! D:\Aditya\KisanSetu\KissanSetu\src\styles.css */"./src/styles.css");
 
 
 /***/ })
