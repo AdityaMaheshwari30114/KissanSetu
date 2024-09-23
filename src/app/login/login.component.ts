@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       // Handle login logic here
       console.log('Login successful', this.loginForm.value);
+      alert("Login successful");
     }
   }
 }

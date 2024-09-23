@@ -220,7 +220,7 @@
   
   .description {
     font-size: 14px;
-    color: #757575;
+    color: rgb(3, 62, 3);
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -322,6 +322,12 @@
     }
   }
   
+  .row {
+    padding: 0 20px; /* Adjust padding to prevent overflow */
+    margin: 0; /* Ensure no extra margin creates overflow */
+    max-width: 100%; /* Ensure the row doesn't exceed the viewport width */
+    box-sizing: border-box; /* Make sure padding is included in the element’s total width and height */
+  }
   .service-icon {
     font-size: 48px; 
     margin-bottom: 15px;
@@ -329,19 +335,14 @@
     display: inline-block; 
   }
   .service-item {
-    border: 1px solid #e0e0e0; 
-    border-radius: 8px; 
-    transition: transform 0.2s;
+    width: 100%; /* Ensure the service card doesn't cause overflow */
+    margin: 20px 0; /* Add margin only vertically, to prevent horizontal overflow */
   }
-  
   .service-item:hover {
-    transform: scale(1.05);
     background-color: rgb(231, 236, 238);
   }
+  body, html {
+    overflow-x: hidden; /* Prevent horizontal overflow globally */
+  }
   
-  .card-body {
-    padding: 1.5rem;
-  }
-  .row{
-    padding: 40px;
-  }
+  

@@ -8,13 +8,13 @@
     </a>
 
     <div class="dropdown" (mouseenter)="showDropdown('services')" (mouseleave)="hideDropdown()">
-      <button mat-button [routerLink]="['/services']"(click)="handleLinkClick()">Services</button>
+      <button mat-button (click)="handleLinkClick()">Services</button>
       <div class="dropdown-content" [class.show]="dropdownVisible === 'services'">
-        <a mat-button (click)="handleLinkClick()">Market Insights & Access</a>
-        <a mat-button (click)="handleLinkClick()">AI-Powered Buyer Matching</a>
-        <a mat-button (click)="handleLinkClick()">Secure Contracts</a>
-         <a mat-button (click)="handleLinkClick()">IoT Based Farm Management</a>
-        <a mat-button (click)="handleLinkClick()">Secure Payments</a>
+        <a mat-button [routerLink]="['/services']"(click)="handleLinkClick()">Market Insights & Access</a>
+        <a mat-button [routerLink]="['/services']"(click)="handleLinkClick()">AI-Powered Buyer Matching</a>
+        <a mat-button [routerLink]="['/services']"(click)="handleLinkClick()">Secure Contracts</a>
+         <a mat-button [routerLink]="['/services']"(click)="handleLinkClick()">IoT Based Farm Management</a>
+        <a mat-button [routerLink]="['/services']"(click)="handleLinkClick()">Secure Payments</a>
       </div>
     </div>
     <div class="dropdown" (mouseenter)="showDropdown('farmers')" (mouseleave)="hideDropdown()">
