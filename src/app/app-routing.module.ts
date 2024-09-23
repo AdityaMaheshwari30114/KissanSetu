@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { FaqComponent } from './faq/faq.component';
 import { FarmerProfileComponent } from './view-farmers-profile/view-farmers-profile.component';
 
+import { TradeComponent } from './trade/trade.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },   
   { path: 'services', component: ServicesComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'FaqComponent', component: FaqComponent },
+  { path: 'trade', component: TradeComponent },
   { path: 'view-contract', component: ViewContractComponent },
   { path: 'farmersProfile', component: FarmerProfileComponent },
   { path: '**', redirectTo: '' }  // Handle unknown routes

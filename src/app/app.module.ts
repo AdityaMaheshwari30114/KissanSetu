@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -28,6 +29,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FarmerProfileComponent } from './view-farmers-profile/view-farmers-profile.component';
 import { ContactFarmerDialogComponent } from './contact-farmer-dialog/contact-farmer-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TradeComponent } from './trade/trade.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +45,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     RegisterComponent,
     FaqComponent,
     FarmerProfileComponent,
-    ContactFarmerDialogComponent
+    ContactFarmerDialogComponent,
+    TradeComponent
   ],
   imports: [
     BrowserModule,
+    MatSnackBarModule,
     AppRoutingModule,         
     BrowserAnimationsModule,  
     MatFormFieldModule,

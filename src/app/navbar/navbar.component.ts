@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -33,5 +33,13 @@ export class NavbarComponent {
 
   handleLinkClick() {
     this.closeNavbar(); // Close navbar and dropdowns on link click
+  }
+
+  constructor(private snackBar: MatSnackBar) {}
+  
+  handleLinkTap() {
+    this.snackBar.open('Coming soon!', 'Close', {
+      duration: 3000, // Display message for 3 seconds
+    }); // Close navbar and dropdowns on link click
   }
 }
