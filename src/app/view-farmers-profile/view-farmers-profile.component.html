@@ -1,0 +1,65 @@
+<div class="container farmer-profile-container">
+  <mat-toolbar color="primary" class="mb-4">
+    <span>Farmer's Profile</span>
+  </mat-toolbar>
+
+  <div class="row"> 
+    <div class="col-md-6">
+      <mat-card class="mb-3">
+        <mat-card-title>Farm Information</mat-card-title><br>
+        <mat-card-content>
+          <p><strong>Location:</strong> {{ farmer.location }}</p>
+          <p><strong>Farm Size:</strong> {{ farmer.farmSize }} acres</p>
+          <p><strong>Experience:</strong> {{ farmer.experience }} years</p>
+          <p><strong>Crops:</strong> {{ farmer.crops.join(', ') }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="accent" (click)="openContactFarmerDialog()">Contact Farmer</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div class="col-md-6">
+  <mat-card class="mb-3">
+    <mat-card-title>Past Contracts</mat-card-title>
+    <mat-card-content>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Contract ID</th>
+              <th>Crop</th>
+              <th>Status</th>
+              <th>Completion Date</th>
+            </tr>
+          </thead>
+          <tbody>
+        <tr *ngFor="let contract of farmer.pastContracts">
+          <td data-label="Contract ID">{{ contract.id }}</td>
+          <td data-label="Crop">{{ contract.crop }}</td>
+          <td data-label="Status">{{ contract.status }}</td>
+          <td data-label="Completion Date">{{ contract.completionDate }}</td>
+        </tr>
+</tbody>
+
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <mat-card class="mb-3">
+        <mat-card-title>Buyer Reviews</mat-card-title>
+        <mat-card-content>
+          <div *ngFor="let review of farmer.reviews" class="review">
+            <mat-icon>person</mat-icon>
+            <p><strong>{{ review.buyerName }}:</strong> {{ review.comment }}</p><br>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -55,5 +55,10 @@ button {
 
   .mat-toolbar {
     font-size: 16px;
+    justify-content: center;
   }
+}
+
+.mat-toolbar {
+  justify-content: center;
 }

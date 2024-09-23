@@ -1,0 +1,19 @@
+.mat-dialog-container {
+    padding: 16px; /* Add padding for better appearance */
+  }
+  
+  .full-width {
+    width: 100%; /* Full width for form fields */
+  }
+  
+  @media (max-width: 600px) {
+    .mat-dialog-container {
+      width: 90%; /* Make the dialog take up most of the screen */
+      max-width: none; /* Override the max-width */
+    }
+  
+    mat-form-field {
+      width: 100%; /* Full width for form fields */
+    }
+  }
+  

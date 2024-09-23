@@ -1,0 +1,81 @@
+.farmer-profile-container {
+  padding: 20px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.review mat-icon {
+  margin-right: 10px;
+  color: #3f51b5;
+}
+
+.mat-card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-title {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .farmer-profile-container {
+    padding: 10px;
+  }
+  
+  .mat-card {
+    margin-bottom: 20px;
+  }
+}
+.mat-card {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.mat-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+@media (max-width: 576px) {
+  .table thead {
+    display: none; /* Hide header for small screens */
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block; /* Make each row a block */
+    width: 100%; /* Full width */
+  }
+
+  .table tr {
+    margin-bottom: 15px; /* Space between rows */
+    border: 1px solid #ddd; /* Optional: border for clarity */
+    padding: 10px; /* Add some padding */
+  }
+
+  .table td {
+    text-align: left; /* Align text to the left */
+    position: relative; /* Position for pseudo-element */
+    padding: 8px; /* Space in cells */
+    border: none; /* Remove border */
+  }
+
+  .table td::before {
+    content: attr(data-label); /* Use data-label for cell content */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Uppercase for clarity */
+    display: block; /* Display as block */
+    margin-bottom: 5px; /* Space below */
+    color: #3f51b5; /* Optional: color for visibility */
+  }
+}
+

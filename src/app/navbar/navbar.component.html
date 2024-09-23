@@ -1,4 +1,5 @@
 <mat-toolbar color="warn">
+
   <span>KISSAN SETU</span>
 
   <div class="nav-links" id="navLinks">
@@ -6,23 +7,29 @@
       <mat-icon>home</mat-icon>
     </a>
 
-    <a mat-button [routerLink]="['/services']">Services</a>
+    <div class="dropdown" (mouseenter)="showDropdown('services')" (mouseleave)="hideDropdown()">
+      <button mat-button [routerLink]="['/services']"(click)="handleLinkClick()">Services</button>
+      <div class="dropdown-content" [class.show]="dropdownVisible === 'services'">
+        <a mat-button (click)="handleLinkClick()">Market Insights & Access</a>
+        <a mat-button (click)="handleLinkClick()">AI-Powered Buyer Matching</a>
+        <a mat-button (click)="handleLinkClick()">Secure Contracts</a>
+         <a mat-button (click)="handleLinkClick()">IoT Based Farm Management</a>
+        <a mat-button (click)="handleLinkClick()">Secure Payments</a>
+      </div>
+    </div>
     <div class="dropdown" (mouseenter)="showDropdown('farmers')" (mouseleave)="hideDropdown()">
       <button mat-button (click)="handleLinkClick()">Farmers</button>
       <div class="dropdown-content" [class.show]="dropdownVisible === 'farmers'">
-        <a mat-button [routerLink]="['/register']" (click)="handleLinkClick()">Register as Farmer</a>
         <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">Submit Produce Details</a>
         <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">Training Resources</a>
         <a mat-button [routerLink]="['/view-contract']" (click)="handleLinkClick()">View Contract</a>
-        <a mat-button [routerLink]="['/']" (click)="handleLinkClick()">FAQ</a>
       </div>
     </div>
 
     <div class="dropdown" (mouseenter)="showDropdown('buyers')" (mouseleave)="hideDropdown()">
-      <button mat-button [routerLink]="['/buyers']" (click)="handleLinkClick()">Buyers</button>
+      <button mat-button  (click)="handleLinkClick()">Buyers</button>
       <div class="dropdown-content" [class.show]="dropdownVisible === 'buyers'">
-        <a mat-button [routerLink]="['/register']" (click)="handleLinkClick()">Register as Buyer</a>
-        <a mat-button [routerLink]="['/farmers-profile']" (click)="handleLinkClick()">View Farmers Profile</a>
+        <a mat-button [routerLink]="['/farmersProfile']" (click)="handleLinkClick()">View Farmers Profile</a>
       </div>
     </div>
 

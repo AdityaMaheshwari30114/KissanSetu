@@ -1,19 +1,32 @@
 .about-container {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Responsive font size */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Responsive title size */
+}
+
+.card-text {
+  font-size: 1rem; /* Responsive paragraph size */
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 1.1rem; /* Smaller title for mobile */
   }
   
-  h1 {
-    color: #3f51b5;
+  .card-text {
+    font-size: 0.9rem; /* Smaller text for mobile */
   }
-  
-  p {
-    font-size: 18px;
-    margin: 20px 0;
-  }
-  
-  h2 {
-    margin-top: 40px;
-    color: #f50057;
-  }
-  
+}

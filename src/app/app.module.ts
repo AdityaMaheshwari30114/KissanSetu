@@ -20,13 +20,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FarmersComponent } from './farmers/farmers.component';
-import { BuyersComponent } from './buyers/buyers.component';
 import { ViewContractComponent } from './view-contract/view-contract.component';
 import { MatTableModule } from '@angular/material/table';
 import { RegisterComponent } from './register/register.component';
 import { FaqComponent } from './faq/faq.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FarmerProfileComponent } from './view-farmers-profile/view-farmers-profile.component';
+import { ContactFarmerDialogComponent } from './contact-farmer-dialog/contact-farmer-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -38,11 +39,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
     LoginComponent,
     ContactComponent,
     AboutComponent,
-    FarmersComponent,
-    BuyersComponent,
     ViewContractComponent,
     RegisterComponent,
-    FaqComponent
+    FaqComponent,
+    FarmerProfileComponent,
+    ContactFarmerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +51,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BrowserAnimationsModule,  
     MatFormFieldModule,
     MatExpansionModule,
+    MatDialogModule,
     MatInputModule,
     MatMenuModule,
     MatCheckboxModule,

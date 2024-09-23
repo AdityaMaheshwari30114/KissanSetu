@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Contact Farmer</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mobile Number</mat-label>
+      <input matInput placeholder="Enter your mobile number" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter your email" required>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="accent" (click)="onSend()">Send Message</button>
+  <button mat-raised-button (click)="onClose()">Cancel</button>
+</mat-dialog-actions>
