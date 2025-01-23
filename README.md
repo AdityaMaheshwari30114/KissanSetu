@@ -28,5 +28,5 @@ KissanSetu/
 ├── backend/               # API and server logic  
 └── README.md              # Project documentation  
 ```
-## 🔗 Project Repository  
-Check out the repository: (https://github.com/AdityaMaheshwari30114/KissanSetu.git)
+## 🔗 Project   
+Check: [(https://github.com/AdityaMaheshwari30114/KissanSetu.git)](https://adityamaheshwari30114.github.io/KissanSetu/)
